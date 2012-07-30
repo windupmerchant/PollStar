@@ -1,0 +1,4 @@
+PollStar
+========
+
+Anonymous opinion-taker.
