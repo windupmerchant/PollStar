@@ -9,7 +9,7 @@ require 'faker'
 def coin_flip
   rand(2)
 end
-@p = 10 ; @qpp = 6
+@p = 3 ; @qpp = 6
 
 @p.times do |n|
   Poll.create!( :title => Faker::Company.catch_phrase,

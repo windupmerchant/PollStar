@@ -1,5 +1,7 @@
 <div class="container">
   <h2>Your poll: "<%= @poll.title %>"</h2>
+  <h3>Your link: <%= @poll.maker_url %></h3>
+  <h3>Their link: <%= @poll.taker_url %></h3>
 
   <div class="edit-attributes-form container span5">
       <%= render 'edit_attributes_form' %>
