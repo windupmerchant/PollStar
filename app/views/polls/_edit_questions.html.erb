@@ -1,0 +1,24 @@
+<h2>
+  Unlimited questions!
+</h2>
+
+<div id="questions">
+  <ol><% @poll.questions.each do |question| %>
+    <li><div class="question">
+      <%= question.interrogative %>
+      <%= link_to "...edit", edit_poll_question_path( question.poll, question ) %>
+    </div></li>
+  <% end -%></ol>
+</div>
+
+<div id="another-question">
+  <%= form_for [@poll, @poll.questions.new] do |f| %>
+    <%= f.label :interrogative %>
+    <%= f.text_field :interrogative, :placeholder => "How do you feel about...?" %>
+
+    <%= f.label :context %>
+    <%= f.text_field :context, :placeholder =>  "See, here's the thing..." %>
+
+    <%= f.submit %>
+  <% end %>
+</div>

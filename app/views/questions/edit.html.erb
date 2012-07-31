@@ -1,0 +1,7 @@
+<div class="container">
+  <%= form_for [@question.poll, @question] do |f| %>
+    <%= f.text_field :interrogative, :placeholder => @question.interrogative %>
+    <%= f.text_field :context, :placeholder => @question.context %>
+    <%= f.submit %>
+  <% end -%>
+</div>

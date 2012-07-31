@@ -6,7 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'faker'
-@p = 10 ; @qpp = 9
+def coin_flip
+  rand(2)
+end
+@p = 10 ; @qpp = 6
 
 @p.times do |n|
   Poll.create!( :title => Faker::Company.catch_phrase,
@@ -17,9 +20,15 @@ end
 
 Poll.all.each do |poll|
   @qpp.times do |n|
-    poll.questions.create!( :interrogative => "#{n}. How do you feel about #{Faker::Address.us_state}?",
+    poll.questions.create!( :interrogative => "How do you feel about #{Faker::Address.us_state}?",
                             :context => Faker::Lorem.sentence(7) )
   end
+end
+
+Question.all.each do |question|
+  coin_flip.odd? ? input = "I don't like it." : input = "I truly love it."
+  question.answer input
+  p "question #{question.id} answered."
 end
 
 p "Seeded #{@p} polls, each with #{@qpp} questions."

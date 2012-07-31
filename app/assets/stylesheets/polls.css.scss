@@ -5,6 +5,7 @@
 #polls{
   border-top: 3px solid black;
 }
+
 #context{
   font-style: italic;
 }
@@ -19,4 +20,8 @@
   background: #ccf;
   margin: 20px;
   padding: 10px;
+}
+
+#container{
+  display: inline;
 }

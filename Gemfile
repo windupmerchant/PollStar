@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'kaminari'
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
+gem 'securerandom'
 
 group :production do
   gem 'sqlite3'

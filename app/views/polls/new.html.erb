@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Oh, so ya wanna make a poll, huh?</h2>
+
+  <div class="container">
+    <%= form_for @poll do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title, :placeholder => "I'm curious to know..." %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description, :placeholder => "What's this really about?" %>
+
+      <%= f.submit %>
+    <% end -%>
+  </div>
+
+
+
+  <div id="another-question">
+    Replace Me With Another Question Form
+  </div>
+  
+</div>

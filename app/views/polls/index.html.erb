@@ -4,6 +4,7 @@
 
   <% @polls.each_with_index do |poll, i| %>
     <h2><%= link_to "#{i+1}. #{poll.title}", poll_url( poll ) %></h2>
+    <div><%= link_to "edit", edit_poll_path(poll) %></div>
     <p class="poll-description"><%= poll.description %></p>
   <% end -%>
 

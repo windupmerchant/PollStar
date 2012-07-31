@@ -9,9 +9,22 @@
 </head>
 
 <body>
-<%= link_to "POLLS", polls_path %>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand", href="<%= polls_url %>">PollStar</a>
+      <a class="brand pull-right", href="<%= new_poll_url %>">+</a>  
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <%= yield %>
+</div>
+
+<div id="debugger-line">
+  <%= debug(params) if Rails.env.development? %>
 </div>
 
 </body>

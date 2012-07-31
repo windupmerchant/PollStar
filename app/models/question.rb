@@ -3,4 +3,7 @@ class Question < ActiveRecord::Base
   belongs_to :poll
   has_many :responses
 
+  def answer(input)
+    self.responses.create! :body => input
+  end
 end

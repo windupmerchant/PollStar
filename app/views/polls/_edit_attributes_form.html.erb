@@ -1,0 +1,11 @@
+<div class="poll-attributes">
+  <%= form_for @poll do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, :placeholder => @poll.title %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description, :placeholder => @poll.description %>
+
+    <%= f.submit %>
+  <% end -%>
+</div>
