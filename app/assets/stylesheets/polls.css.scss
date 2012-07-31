@@ -1,0 +1,22 @@
+// Place all the styles related to the polls controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#polls{
+  border-top: 3px solid black;
+}
+#context{
+  font-style: italic;
+}
+
+#questions{
+  display: inline;
+  margin: 40px;
+}
+
+#question{
+  border-top: 3px solid black;
+  background: #ccf;
+  margin: 20px;
+  padding: 10px;
+}

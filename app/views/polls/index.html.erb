@@ -1,0 +1,10 @@
+<h1>Polls, kiddo!</h1>
+
+<div id="polls" class="container">
+
+  <% @polls.each_with_index do |poll, i| %>
+    <h2><%= link_to "#{i+1}. #{poll.title}", poll_url( poll ) %></h2>
+    <p class="poll-description"><%= poll.description %></p>
+  <% end -%>
+
+</div>

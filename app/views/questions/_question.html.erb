@@ -1,0 +1,22 @@
+<div id="question" class="span3">
+  <h3 class="interrogative">
+    <%= question.interrogative %>
+  </h3>
+
+  <div class="context">
+    <%= question.context %>
+  </div>
+
+  <div class="responses">
+    <ul><% question.responses.each do |response| %>
+      <li class="response-body"><%= response.body %></li>
+    </ul><% end -%>
+  </div>
+
+  <div class="response-field">
+    <%= form_for [question.poll, question, question.responses.new] do |f| %>
+      <%= f.text_field :body %>
+      <%= f.submit %>
+    <% end -%>
+  </div>
+</div>

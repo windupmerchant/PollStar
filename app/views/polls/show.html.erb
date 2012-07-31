@@ -1,0 +1,13 @@
+<h1><%= @poll.title + "!" %></h1>
+
+<div class="description">
+  <%= @poll.description %>
+</div>
+
+<div id="questions" class="container">
+  <%= render @poll.questions %>
+</div>
+
+<div id="response-submit-button">
+  <%= "RESPONSE SUBMIT BUTTON" %>
+</div>
